@@ -110,4 +110,35 @@ EVENTS = {
         },
         "repeatable": True,
     },
+    "smocking_lobby_teenagers": {
+        "description": "The smoking lobby offers you funding in exchange for a law allowing sales to teenagers",
+        "options": {
+            "option1": {
+                "description": "Accepts the proposal",
+                "effects": {
+                    "health": -20,
+                    "happiness": -5,
+                    "wealth": +20,
+                    "politic": -5,
+                },
+            },
+            "option2": {
+                "description": "Rejects the proposal",
+                "effects": {
+                    "happiness": +5,
+                    "politic": +5,
+                },
+            },
+            "option3": {
+                "description": "Accepts only for electronic cigarettes",
+                "effects": {
+                    "health": -10,
+                    "happiness": -3,
+                    "wealth": +10,
+                    "politic": -3,
+                },
+            },
+        },
+        "repeatable": False,
+    },
 }
