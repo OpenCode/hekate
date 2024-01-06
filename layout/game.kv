@@ -1,0 +1,264 @@
+MDBottomNavigation:
+
+    MDBottomNavigationItem:
+        id: game_screen
+        name: "Game"
+        text: "Game"
+        icon: "gamepad-circle-up"
+
+        MDGridLayout:
+            cols: 2
+            padding: 10
+            spacing: 10
+
+            MDBoxLayout:
+                id: political_info
+                orientation: "vertical"
+                size_hint: 0.40, 1
+
+                MDBoxLayout:
+                    id: happiness_info
+                    orientation: "horizontal"
+
+                    MDIcon:
+                        id: happiness_icon
+                        icon: "emoticon-happy"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+                    MDLabel:
+                        text: "Happiness"
+                        halign: "center"
+
+                    MDProgressBar:
+                        id: happiness_progress
+                        value: 70
+                        max: 100
+                        color: "violet"
+                        size_hint: 1, .05
+                        pos_hint: {'y': .45}
+
+                MDBoxLayout:
+                    id: health_info
+                    orientation: "horizontal"
+
+                    MDIcon:
+                        id: health_icon
+                        icon: "hospital"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDLabel:
+                        text: "Health"
+                        halign: "center"
+
+                    MDProgressBar:
+                        id: health_progress
+                        value: 60
+                        max: 100
+                        color: "aliceblue"
+                        size_hint: 1, .05
+                        pos_hint: {'y': .45}
+
+                MDBoxLayout:
+                    id: environment_info
+                    orientation: "horizontal"
+
+                    MDIcon:
+                        id: environment_icon
+                        icon: "leaf"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDLabel:
+                        text: "Environment"
+                        halign: "center"
+
+                    MDProgressBar:
+                        id: environment_progress
+                        value: 60
+                        max: 100
+                        color: "seagreen"
+                        size_hint: 1, .05
+                        pos_hint: {'y': .45}
+
+                MDBoxLayout:
+                    id: army_info
+                    orientation: "horizontal"
+
+                    MDIcon:
+                        id: army_icon
+                        icon: "submarine"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDLabel:
+                        text: "Army"
+                        halign: "center"
+
+                    MDProgressBar:
+                        id: army_progress
+                        value: 60
+                        max: 100
+                        color: "darkolivegreen"
+                        size_hint: 1, .05
+                        pos_hint: {'y': .45}
+
+                MDBoxLayout:
+                    id: wealth_info
+                    orientation: "horizontal"
+
+                    MDIcon:
+                        id: wealth_icon
+                        icon: "bank"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDLabel:
+                        text: "Wealth"
+                        halign: "center"
+
+                    MDProgressBar:
+                        id: wealth_progress
+                        value: 60
+                        max: 100
+                        color: "teal"
+                        size_hint: 1, .05
+                        pos_hint: {'y': .45}
+
+                MDBoxLayout:
+                    id: faith_info
+                    orientation: "horizontal"
+
+                    MDIcon:
+                        id: faith_icon
+                        icon: "hands-pray"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDLabel:
+                        text: "Faith"
+                        halign: "center"
+
+                    MDProgressBar:
+                        id: faith_progress
+                        value: 60
+                        max: 100
+                        color: "lightblue"
+                        size_hint: 1, .05
+                        pos_hint: {'y': .45}
+
+                MDBoxLayout:
+                    id: science_info
+                    orientation: "horizontal"
+
+                    MDIcon:
+                        id: science_icon
+                        icon: "test-tube"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDLabel:
+                        text: "Science"
+                        halign: "center"
+
+                    MDProgressBar:
+                        id: science_progress
+                        value: 60
+                        max: 100
+                        color: "lavender"
+                        size_hint: 1, .05
+                        pos_hint: {'y': .45}
+
+                MDBoxLayout:
+                    id: politic_info
+                    orientation: "horizontal"
+
+                    MDIcon:
+                        id: politic_icon
+                        icon: "tie"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDLabel:
+                        text: "Politic"
+                        halign: "center"
+
+                    MDProgressBar:
+                        id: politic_progress
+                        value: 60
+                        max: 100
+                        color: "lavender"
+                        size_hint: 1, .05
+                        pos_hint: {'y': .45}
+
+            MDBoxLayout:
+                id: card
+                orientation: "vertical"
+                size_hint: 0.60, 1
+                radius: 36
+
+                FitImage:
+                    id: card_image
+                    source: 'assets/base/start.jpg'
+                    size_hint_y: 2
+                    radius: 36, 36, 0, 0
+
+                MDLabel:
+                    id: card_description
+                    text: "The game starts here!"
+                    halign: "center"
+                    font_style: "H4"
+                    size_hint_y: 1.5
+
+                MDBoxLayout:
+                    id: options_buttons
+                    orientation: "horizontal"
+                    size_hint_y: 0.5
+                    spacing: 3
+                    radius: 0, 0, 36, 36
+
+                    MDRaisedButton:
+                        id: start_button
+                        text: "Start!"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        on_press: app.start()
+                        size_hint: 1, 1
+
+    MDBottomNavigationItem:
+        id: about_screen
+        name: "About"
+        text: "About"
+        icon: "information"
+
+        MDBoxLayout:
+            id: card
+            orientation: "vertical"
+            spacing: 10
+            padding: 10
+
+            MDLabel:
+                text: "Hekate"
+                halign: "center"
+                font_style: "H1"
+
+            MDLabel:
+                id: version_label
+                text: "Version: __VERSION__ | build: __BUILD__"
+                halign: "center"
+                font_style: "H4"
+
+            MDRectangleFlatIconButton:
+                text: "Visit Hekate Website"
+                icon: "web"
+                pos_hint: {"center_x": .5, "center_y": .5}
+                on_press: app.visit_website("home")
+                size_hint: 0.8, 0.2
+                line_color: 0, 0, 0, 0
+
+            MDRectangleFlatIconButton:
+                text: "Card images from FreePik"
+                icon: "message-image"
+                pos_hint: {"center_x": .5, "center_y": .5}
+                on_press: app.visit_website("card_images")
+                size_hint: 0.8, 0.2
+                line_color: 0, 0, 0, 0
